@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ワンだふる・ライフ | 犬の可愛さ、再発見</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #fff9f0 0%, #ffe8d6 100%);
+        }
+        .dog-card:hover {
+            transform: translateY(-8px);
+            transition: all 0.3s ease;
+        }
+        .paw-icon {
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .paw-icon:hover {
+            transform: rotate(20deg) scale(1.2);
+        }
+        .heart-btn:active {
+            transform: scale(0.9);
+        }
+        /* アニメーション用 */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-orange-50 text-gray-800">
+
+    <!-- ナビゲーション -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-orange-600 flex items-center gap-2">
+                <span>🐾 ワンだふる・ライフ</span>
+            </div>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="#home" class="hover:text-orange-500">ホーム</a>
+                <a href="#gallery" class="hover:text-orange-500">癒やしのギャラリー</a>
+                <a href="#reasons" class="hover:text-orange-500">可愛さの秘密</a>
+                <a href="#interaction" class="hover:text-orange-500">触れ合い</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <header id="home" class="hero-gradient pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="md:w-1/2 space-y-6">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight text-orange-900">
+                    世界で一番、<br>
+                    <span class="text-orange-500 italic">「可愛い」</span>が<br>
+                    詰まった場所。
+                </h1>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    愛くるしい瞳、振られる尻尾、あたたかい温もり。犬という存在が、私たちの生活をどれほど豊かに、そして優しくしてくれるか。その魅力のすべてをここに集めました。
+                </p>
+                <div class="flex gap-4">
+                    <a href="#gallery" class="bg-orange-500 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-orange-600 transition-colors">
+                        癒やしを見る
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="absolute -top-10 -left-10 bg-white p-4 rounded-2xl shadow-xl floating z-10 hidden sm:block">
+                    <p class="text-2xl">🐶 ワン！</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                     alt="Cute Golden Retriever Puppy" 
+                     class="rounded-3xl shadow-2xl w-full object-cover aspect-square"
+                     onerror="this.src='https://via.placeholder.com/800x800?text=Cute+Dog'">
+            </div>
+        </div>
+    </header>
+
+    <!-- ギャラリーセクション -->
+    <section id="gallery" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-orange-900">癒やしの瞬間</h2>
+                <p class="text-gray-500">眺めているだけで、心がふわっと軽くなる魔法の時間。</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="dog-card bg-orange-50 rounded-2xl overflow-hidden shadow-md group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Dog 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">のんびりお昼寝</h3>
+                        <p class="text-gray-600 text-sm italic">「今日はもう動かないよ〜」</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="dog-card bg-orange-50 rounded-2xl overflow-hidden shadow-md group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Dog 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">ウルウルな瞳</h3>
+                        <p class="text-gray-600 text-sm italic">「おやつ、くれるよね？」</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="dog-card bg-orange-50 rounded-2xl overflow-hidden shadow-md group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Dog 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">元気いっぱい！</h3>
+                        <p class="text-gray-600 text-sm italic">「散歩の準備はできた？」</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 可愛さの秘密 -->
+    <section id="reasons" class="py-20 px-6 hero-gradient">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-orange-900">犬が可愛い3つの理由</h2>
+            <div class="space-y-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm flex gap-6 items-start border-l-8 border-orange-400">
+                    <span class="text-4xl">❤️</span>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">無償の愛</h3>
+                        <p class="text-gray-600">あなたがどんな時でも、尻尾を振って駆け寄ってくれる。その一途な姿勢に心が打たれます。</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm flex gap-6 items-start border-l-8 border-orange-300">
+                    <span class="text-4xl">👅</span>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">豊かな感情表現</h3>
+                        <p class="text-gray-600">嬉しい時は全力で回り、困った時は小首をかしげる。全身を使ったリアクションがたまりません。</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm flex gap-6 items-start border-l-8 border-orange-200">
+                    <span class="text-4xl">☁️</span>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">ふわふわの魔法</h3>
+                        <p class="text-gray-600">なでるだけでストレスが軽減されると言われる柔らかい毛並み。それはまるで歩く癒やしの雲です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- インタラクション -->
+    <section id="interaction" class="py-20 px-6 bg-white text-center">
+        <div class="max-w-2xl mx-auto bg-orange-100 p-12 rounded-[3rem] shadow-inner border-4 border-dashed border-orange-300">
+            <h2 class="text-3xl font-bold mb-6 text-orange-900">今、何回「キュン」とした？</h2>
+            <p class="text-gray-600 mb-8">このサイトを見て、癒やされた回数だけボタンを押してみてね！</p>
+            
+            <div class="text-6xl font-bold text-orange-600 mb-8" id="kyun-counter">0</div>
+            
+            <button onclick="addKyun()" class="heart-btn bg-red-400 text-white p-10 rounded-full shadow-2xl hover:bg-red-500 transition-all flex flex-col items-center justify-center mx-auto group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-2 group-hover:scale-125 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                <span class="font-bold text-lg">キュン！</span>
+            </button>
+            
+            <p class="mt-8 text-orange-700 font-medium" id="kyun-message"></p>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="py-12 bg-orange-900 text-orange-100 px-6 text-center">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-3xl mb-4">🐾</p>
+            <p class="mb-2">ワンだふる・ライフ - すべての犬たちに感謝を込めて</p>
+            <p class="text-orange-400 text-sm">&copy; 2024 Happy Dog Owners Association</p>
+        </div>
+    </footer>
+
+    <script>
+        let counter = 0;
+        const messages = [
+            "癒やしレベル：上昇中！",
+            "わんこは正義です。",
+            "だんだん笑顔になってきた？",
+            "もう止まらない！可愛さの限界突破！",
+            "あなたは立派な犬派ですね🐶"
+        ];
+
+        function addKyun() {
+            counter++;
+            const counterElement = document.getElementById('kyun-counter');
+            const messageElement = document.getElementById('kyun-message');
+            
+            // カウントアップ
+            counterElement.innerText = counter;
+            
+            // メッセージ変更
+            if (counter % 5 === 0) {
+                const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+                messageElement.innerText = randomMsg;
+                messageElement.classList.add('animate-bounce');
+                setTimeout(() => messageElement.classList.remove('animate-bounce'), 1000);
+            }
+
+            // パーティクル的な演出を模したログ（コンソール）
+            console.log("Kyun! Total: " + counter);
+        }
+    </script>
+</body>
+</html>
